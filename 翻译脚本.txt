@@ -1,4 +1,4 @@
-###此文件很乱，顺序也不要更改，因为部分关键字段替换需要按先后顺序进行，不然可能会导致替换后不正常。
+﻿###此文件很乱，顺序也不要更改，因为部分关键字段替换需要按先后顺序进行，不然可能会导致替换后不正常。
 ###字段有可能在新的版本改动，然后此对照关系可能部分失效！！
 ###0.15.0
 ###更新：2021-3-26
@@ -48,7 +48,7 @@ startup",items:=startup",items:["静默","错误","警告","信息","调试"],No
 "menu-item-change",'about'="menu-item-change",'关于'
 'menu-item-change',"about"='menu-item-change',"关于"
 'menu-item-change','about'='menu-item-change','关于'
-#
+
 Dashboard has crashed=主窗口崩溃了
 "Reload"="重载"
 'Reload'='重载'
@@ -978,7 +978,7 @@ Destination:=目标:
 Chains:=链路:
 "Pause"="暂停"
 "Resume"="恢复"
-"search"="筛选"
+#"search"="筛选"
 ##v0.15.0
 
 ###v0.15.2
@@ -996,12 +996,6 @@ v("Script"=v("脚本"
 "foreground color"="前景色 red 或 #CBF 等"
 " Scheme\n    "="跳转方案(URI Scheme)\n    "
 ###v0.15.3-end
-
-
-
-
-
-
 
 ###############
 ###############
@@ -1146,14 +1140,14 @@ Traffic:=流量:
 hide)"=隐藏)"
 "test latency"="测试延迟"
 "show or hide proxies"="显示或隐藏代理"
-"edit"="编辑"
+#"edit"="编辑"
 "edit policies"="修改策略"
 "edit rules"="修改规则"
 "duplicate profile"="复制为新的配置"
 hint:"URL"=hint:"显示URL和二维码"
 "matching parsers"="预处理配置信息"
-"settings"="修改配置信息"
-"refresh"="更新此配置"
+#"settings"="修改配置信息"
+#"refresh"="更新此配置"
 hint:"delete"=hint:"删除此配置"
 "Make sure you have "="请确认你已经 "
 serviceNeedUpdate?"updated":"installed"=serviceNeedUpdate?"更新":"安装"
@@ -1163,7 +1157,7 @@ serviceNeedUpdate?"updated":"installed"=serviceNeedUpdate?"更新":"安装"
 "service done"="服务完成"
 "Automatic Upgrade completed!"="自动升级完成!"
 "Do you want to restart the APP?"="是否重新启动 APP?"
-t.from)=t.from.replace("connect error:","错误:").replace("connectex: A socket operation was attempted to an unreachable network"," 尝试对无法访问的网络进行套接字操作").replace("all DNS requests failed, first error","所有DNS请求失败，第一个错误").replace("use default dns resolve failed: couldn't find ip","使用默认DNS解析失败:找不到IP").replace("dial","连接").replace("timeout","超时").replace("lookup","查找").replace("no such host","域名未解析"))
+#t.from)=t.from.replace("connect error:","错误:").replace("connectex: A socket operation was attempted to an unreachable network"," 尝试对无法访问的网络进行套接字操作").replace("all DNS requests failed, first error","所有DNS请求失败，第一个错误").replace("use default dns resolve failed: couldn't find ip","使用默认DNS解析失败:找不到IP").replace("dial","连接").replace("timeout","超时").replace("lookup","查找").replace("no such host","域名未解析"))
 
 "Aborted because of declined dependency: "="由于依赖关系被拒绝而中止: "
 ("Aborted because "+I+" is not accepted"+D)=("中止原因: "+I+" 未被 "+D+"所接受")
@@ -2086,3 +2080,65 @@ name:"Headers"=name:"标头"
 #悬浮窗规则模式宽度
 30):=60):
 #v0.19.6-end
+
+#0.19.9
+"Don't Save"="不保存"
+"Do you want to save the changes?"="是否要保存更改？"
+e._v("Manage")=e._v("管理")
+"Are you sure to quit?"="你确定要退出吗？"
+"Logs Folder"="日志文件夹"
+"failed to clash core, logs are not available."="Clash 核心失败，日志不可用。"
+#0.19.9-end
+
+#0.19.11
+text:"Edit externally"=text:"从外部编辑"
+text:"Scroll to group"=text:"滚动到组"
+'An adapter named "cfw-tap" will route your data into clash.\n\nIf the installation box pops up, keep clicking "Next" until the installation is complete.'='名为“cfw-tap”的适配器会将您的数据路由到 Clash 中。\n\n如果弹出安装对话框，请一直点击“下一步”，直到安装完成。'
+message:"It might take a while.\nThe APP will be relaunched automatically."=message:"这可能需要一段时间。\nAPP将自动启动。"
+"\n\nnftables and iproute2 are required, please install them first!!!"="\n\n需要nftables和iproute2，请先安装！！！"
+"\n\nCurrent status: "="\n\n当前状态："
+message:"Clash 核心程序默认是将日志打印输出到&nbsp;标准输出设备(通常是屏幕).&nbsp;CFW&nbsp;在日志级别为非&nbsp;silent&nbsp;时会把日志写入到磁盘文件。<br/>日志量由少到多排序为：<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;静默&nbsp;<&nbsp;错误&nbsp;<&nbsp;警告&nbsp;<&nbsp;信息&nbsp;<&nbsp;调试<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;silent&nbsp;<&nbsp;error&nbsp;<&nbsp;warning&nbsp;<&nbsp;info&nbsp;<&nbsp;debug<br/>silent&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;不记录日志<br/>error&nbsp;&nbsp;&nbsp;&nbsp;：记录错误和异常信息到日志文件<br/>warning:&nbsp;记录错误和异常还有告警信息<br/>info&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;记录程序正常运行时的日志(包括警告，错<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;误和异常信息)<br/>debug&nbsp;&nbsp;:&nbsp;日志量最多，一般用于提供日志文件给开<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;发者进行诊断问题"=message:"Clash核心程序默认是将日志打印输出到标准输出设备（通常是屏幕）。CFW 在日志级别为非静默时会把日志写入到磁盘文件。\n\n日志量由少到多排序为：\n静默<错误<警告<信息<调试\n\n静默：不记录日志\n错误：记录错误和异常信息到日志文件\n警告：记录错误和异常还有告警信息\n信息：记录程序正常运行时的日志(包括警告，错误和异常信息)\n调试：日志量最多，一般用于提供日志文件给开发者进行诊断问题"
+"run as admin"="以管理员身份运行"
+
+#修复在删除配置文件对话框 点叉时会直接删除配置文件
+buttons:["是","否"]=buttons:["Yes","No"]
+#0.19.11-end
+
+#0.19.12
+title:"Security"=title:"安全"
+Core Secret=Secret 核心
+hint:"secret is currently empty, we strongly recommend to generate one"=hint:"Secret 当前为空，我们强烈建议生成一个"
+"Generate"="生成"
+message:"Do you want to set a new uuidv4 secret in Home Directory/config.yaml and restart the APP?"=message:"是否要在 config.yaml 中设置新的 uuidv4 Secret 并重启 APP？"
+#0.19.12-end
+
+#0.19.14
+{attrs:{hint:"random mixed port"}={attrs:{hint:"使用动态端口连接混合配置"}
+[e._v("Random Mixed Port")]=[e._v("使用动态端口连接混合配置")]
+#0.19.14-end
+
+#0.19.19
+e._v("Tray Proxy Groups Style")=e._v("托盘代理组样式")
+"Submenu","Hidden"="子菜单","隐藏"
+#0.19.19-end
+
+#0.19.22
+attrs:{type:"text",placeholder:"search"}=attrs:{type:"text",placeholder:"筛选"}
+attrs:{hint:"terminal"}=attrs:{hint:"终端"}
+"Network Interfaces"="网络接口"
+"Network interfaces"="网络接口"
+[e._v("Address:")]=[e._v("地址:")]
+[e._v("Netmask:")]=[e._v("子网掩码:")]
+"Process Path"="进程路径"
+#0.19.22-end
+
+#0.19.23
+"Show Process If Present"="显示进程(如果存在)"
+#0.19.23-end
+
+#0.19.24
+"It might take a while.\nThe APP will be relaunched automatically.\n\nCurrent status: "="这可能需要一段时间.\nAPP 将自动重新启动.\n\n当前状态: "
+[e._v("Alive")]=[e._v("活动中")]
+[e._v("Closed")]=[e._v("已关闭")]
+t.from)=t.from.replace("connect error:","错误:").replace("connectex: A socket operation was attempted to an unreachable network"," 尝试对无法访问的网络进行套接字操作").replace("all DNS requests failed, first error","所有DNS请求失败，第一个错误").replace("use default dns resolve failed: couldn't find ip","使用默认DNS解析失败:找不到IP").replace("dial","连接").replace("timeout","超时").replace("lookup","查找").replace("no such host","域名未解析").replace("connectex: No connection could be made because the target machine actively refused it","出错:由于目标机主动拒绝连接，所以无法进行连接"))
+#0.19.24-end
